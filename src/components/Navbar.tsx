@@ -9,6 +9,8 @@ const Navbar = () =>{
     return(
         <NavbarBs expand="lg" sticky="top" className="bg-white shadow-sm mb-3">
             <Container>
+                <NavbarBs.Toggle aria-controls="basic-navbar-nav" />
+                <NavbarBs.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                     <Nav.Link to='/' as={NavLink}>Home</Nav.Link>
                     <Nav.Link to='/store' as={NavLink}>Store</Nav.Link>
@@ -23,6 +25,7 @@ const Navbar = () =>{
                     <div className='d-flex align-items-center justify-content-center rounded-circle bg-danger text-white' style={{width: '20px', height: '20px', position: 'absolute', bottom: '0', transform: 'translate(80%, 0%)' }}>{cartQuantity}</div>
                 </Button>
                 )}
+                </NavbarBs.Collapse>
             </Container>
         </NavbarBs>
     )
